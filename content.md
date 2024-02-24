@@ -96,7 +96,7 @@ end
 #### Create the Email View:
 Next, set up the email view for the task_created action. Open `app/views/task_mailer/task_created.html.erb` (or create it if it doesn't exist) and add the following content:
 
-```html
+```erb
 <!-- app/views/task_mailer/task_created.html.erb -->
 <h1>New Task Created</h1>
 <p>Hello <%= @user.email %>,</p>
