@@ -61,7 +61,7 @@ Now we're ready to test out our "forgot password" flow.
 2. Sign out and go through the “Forgot password” flow.
 3. It should open a new tab with your email. 📧
 
-<!-- TODO: add screenshot/gif of forgot password email pop up -->
+![Using the letter_opener gem](assets/using_letter_opener.gif)
 
 <aside>
 You can use `rails g devise:views` to customize devise views and mailers.
@@ -132,6 +132,8 @@ With everything in place, you're now ready to test the email functionality.
 1. Start your Rails server and sign in to your application.
 2. Create a new task.
 3. Check your development environment's default mail viewer (Letter Opener's web interface, if you're using it) to see the email generated for the new task.
+
+![Sending_a_task_email](assets/sending_a_task_email.gif)
 
 This process integrates email notifications seamlessly into your application workflow, enhancing the user experience by keeping them informed about new tasks. Remember, while testing in development with Letter Opener is straightforward, you'll need to configure your production environment to use a real email service provider for sending emails to actual users.
 
