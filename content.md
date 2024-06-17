@@ -235,6 +235,66 @@ Example DMARC record
 ### Using Mailkick Gem for Subscription Management
 The [Mailkick](https://github.com/ankane/mailkick) gem is a powerful tool for managing email subscriptions and unsubscribes in Rails applications. It provides a simple interface for subscription management and integrates seamlessly with various email services.
 
+## Quiz
+
+- What gem is commonly used to add email functionality to a Rails application for development testing?
+- Letter Opener
+  - Correct! Letter Opener allows you to view emails in your browser without sending them for real.
+- Devise
+  - Not quite. Devise is used for authentication, not for email testing.
+- Sendgrid
+  - Not quite. Sendgrid is used for sending emails in production, not for testing in development.
+{: .choose_best #email_functionality title="Email Functionality in Rails" points="1" answer="1" }
+
+- Which command generates a mailer in Rails?
+- `rails g mailer`
+  - Correct! This command generates a new mailer with the specified actions.
+- `rails g scaffold`
+  - Not quite. This command generates a full scaffold for a resource, including models, views, and controllers.
+- `rails g devise`
+  - Not quite. This command sets up Devise for authentication.
+{: .choose_best #generate_mailer title="Generating a Mailer" points="1" answer="1" }
+
+- How do you send an email immediately in Rails?
+- `deliver_later`
+  - Not quite. deliver_later schedules the email to be sent later, typically using background jobs.
+- `mail`
+  - Not quite. `mail` is used within a mailer to compose the email, not to send it.
+- `deliver_now`
+  - Correct! `deliver_now` sends the email immediately.
+{: .choose_best #send_email title="Sending Emails Immediately" points="1" answer="3" }
+
+- Which Rails feature handles inbound emails?
+- `ActionMailbox`
+  - Correct! ActionMailbox handles inbound emails in Rails.
+- `ActionMailer`
+  - Not quite. ActionMailer handles outbound emails, not inbound.
+- `ActiveRecord`
+  - Not quite. ActiveRecord is used for interacting with the database.
+{: .choose_best #inbound_emails title="Handling Inbound Emails" points="1" answer="1" }
+
+- Which of the following are common practices to avoid having your emails marked as spam? (Select all that apply)
+- Use a reputable email sending service.
+  - Correct! Using a reputable service helps maintain a good sender reputation.
+- Avoid using unsubscribe links.
+  - Not quite. Providing an easy way to unsubscribe is important to comply with regulations and maintain trust.
+- Keep your email lists clean.
+  - Correct! Regularly cleaning your email lists helps reduce bounce rates and improve sender reputation.
+- Avoid spammy content.
+  - Correct! Avoiding content that triggers spam filters is crucial for email deliverability.
+{: .choose_all #avoid_spam title="Avoiding Spam Filters" points="3" answer="[1, 3, 4]" }
+
+- What are some key methods used to authenticate emails and improve sender reputation? (Select all that apply)
+- SPF (Sender Policy Framework).
+  - Correct! SPF helps specify which mail servers are authorized to send emails on behalf of your domain.
+- DKIM (DomainKeys Identified Mail).
+  - Correct! DKIM provides a way to validate that an email was indeed sent and authorized by the domain owner.
+- DMARC (Domain-based Message Authentication, Reporting, and Conformance).
+  - Correct! DMARC builds upon SPF and DKIM to provide domain owners control over what happens when an email fails authentication.
+- HTTPS (Hypertext Transfer Protocol Secure).
+  - Not quite. HTTPS is used to secure web traffic, not for email authentication.
+{: .choose_all #email_authentication title="Email Authentication Methods" points="3" answer="[1, 2, 3]" }
+
 ## Conclusion
 By incorporating email functionality into your Rails applications, you can enhance user interaction and engagement. Whether it's through user authentication emails, notifications, or marketing messages, email remains a vital communication tool in web applications.
 
